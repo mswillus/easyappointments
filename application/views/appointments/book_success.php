@@ -20,9 +20,9 @@
 <div id="main" class="container">
     <div class="row wrapper">
         <div id="success-frame" class="col-12 border my-auto frame-container">
-            <div>
-                <img id="success-icon" class="mt-0 mb-2" src="<?= base_url('assets/img/success.png') ?>"/>
-            </div>
+            <p style="font-size:50pt">
+                🎉
+            </p>
 
             <div>
                 <h3><?= lang('appointment_registered') ?></h3>
@@ -59,10 +59,6 @@
             </div>
 
             <div class="mt-2">
-                <small>
-                    Powered by
-                    <a href="https://easyappointments.org">Easy!Appointments</a>
-                </small>
             </div>
         </div>
     </div>

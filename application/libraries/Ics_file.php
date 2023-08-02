@@ -89,25 +89,13 @@ class Ics_file {
             '',
             lang('provider'),
             '',
-            lang('name') . ': ' . $provider['first_name'] . ' ' . $provider['last_name'],
+            lang('name') . ': ' . $provider['first_name'],
             lang('email') . ': ' . $provider['email'],
-            lang('phone_number') . ': ' . $provider['phone_number'],
-            lang('address') . ': ' . $provider['address'],
-            lang('city') . ': ' . $provider['city'],
-            lang('zip_code') . ': ' . $provider['zip_code'],
             '',
             lang('customer'),
             '',
-            lang('name') . ': ' . $customer['first_name'] . ' ' . $customer['last_name'],
+            lang('name') . ': ' . $customer['first_name'],
             lang('email') . ': ' . $customer['email'],
-            lang('phone_number') . ': ' . $customer['phone_number'],
-            lang('address') . ': ' . $customer['address'],
-            lang('city') . ': ' . $customer['city'],
-            lang('zip_code') . ': ' . $customer['zip_code'],
-            '',
-            lang('notes'),
-            '',
-            $appointment['notes'],
         ];
 
         $event->setDescription(implode("\\n", $description));
@@ -120,7 +108,7 @@ class Ics_file {
         }
 
         // Add the event attendees.
-        $attendee->setName($customer['first_name'] . ' ' . $customer['last_name']);
+        $attendee->setName($customer['first_name']);
         $attendee->setCalendarUserType('INDIVIDUAL')
             ->setRole('REQ-PARTICIPANT')
             ->setParticipationStatus('NEEDS-ACTION')
@@ -152,7 +140,7 @@ class Ics_file {
             $attendee->setValue($provider['email']);
         }
 
-        $attendee->setName($provider['first_name'] . ' ' . $provider['last_name']);
+        $attendee->setName($provider['first_name']);
         $attendee->setCalendarUserType('INDIVIDUAL')
             ->setRole('REQ-PARTICIPANT')
             ->setParticipationStatus('ACCEPTED')
@@ -164,7 +152,7 @@ class Ics_file {
 
         $organizer
             ->setValue($provider['email'])
-            ->setName($provider['first_name'] . ' ' . $provider['last_name']);
+            ->setName($provider['first_name']);
 
         $event->setOrganizer($organizer);
 

@@ -48,16 +48,7 @@
                 <td class="label" style="padding: 3px;font-weight: bold;"><?= lang('email') ?></td>
                 <td style="padding: 3px;"><?= $customer_email ?></td>
             </tr>
-            <tr>
-                <td class="label" style="padding: 3px;font-weight: bold;"><?= lang('phone_number') ?></td>
-                <td style="padding: 3px;"><?= $customer_phone ?></td>
-            </tr>
-            <tr>
-                <td class="label" style="padding: 3px;font-weight: bold;"><?= lang('address') ?></td>
-                <td style="padding: 3px;"><?= $customer_address ?></td>
-            </tr>
         </table>
-
         <h2><?= lang('appointment_link_title') ?></h2>
         <a href="<?= $appointment_link ?>" style="width: 600px;"><?= $appointment_link ?></a>
     </div>

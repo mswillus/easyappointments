@@ -29,11 +29,11 @@
             <!-- FRAME TOP BAR -->
 
             <div id="header">
-                <span id="company-name"><?= $company_name ?></span>
+                <span id="company-name">Book Appointment</span>
 
                 <div id="steps">
                     <div id="step-1" class="book-step active-step"
-                         data-tippy-content="<?= lang('service_and_provider') ?>">
+                         data-tippy-content="Purpose and Person">
                         <strong>1</strong>
                     </div>
 
@@ -42,7 +42,7 @@
                         <strong>2</strong>
                     </div>
                     <div id="step-3" class="book-step" data-toggle="tooltip"
-                         data-tippy-content="<?= lang('customer_information') ?>">
+                         data-tippy-content="Your Contact Information">
                         <strong>3</strong>
                     </div>
                     <div id="step-4" class="book-step" data-toggle="tooltip"
@@ -97,13 +97,11 @@
 
             <div id="wizard-frame-1" class="wizard-frame">
                 <div class="frame-container">
-                    <h2 class="frame-title"><?= lang('service_and_provider') ?></h2>
-
                     <div class="row frame-content">
                         <div class="col">
                             <div class="form-group">
                                 <label for="select-service">
-                                    <strong><?= lang('service') ?></strong>
+                                    <strong>Purpose</strong>
                                 </label>
 
                                 <select id="select-service" class="form-control">
@@ -177,7 +175,7 @@
 
                             <div class="form-group">
                                 <label for="select-provider">
-                                    <strong><?= lang('provider') ?></strong>
+                                    <strong>With:</strong>
                                 </label>
 
                                 <select id="select-provider" class="form-control"></select>
@@ -243,23 +241,16 @@
             <div id="wizard-frame-3" class="wizard-frame" style="display:none;">
                 <div class="frame-container">
 
-                    <h2 class="frame-title"><?= lang('customer_information') ?></h2>
+                    <h2 class="frame-title">Your Contact Information</h2>
 
                     <div class="row frame-content">
                         <div class="col-12 col-md-6">
                             <div class="form-group">
                                 <label for="first-name" class="control-label">
-                                    <?= lang('first_name') ?>
+                                        Name
                                     <span class="text-danger">*</span>
                                 </label>
                                 <input type="text" id="first-name" class="required form-control" maxlength="100"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="last-name" class="control-label">
-                                    <?= lang('last_name') ?>
-                                    <span class="text-danger">*</span>
-                                </label>
-                                <input type="text" id="last-name" class="required form-control" maxlength="120"/>
                             </div>
                             <div class="form-group">
                                 <label for="email" class="control-label">
@@ -268,41 +259,9 @@
                                 </label>
                                 <input type="text" id="email" class="required form-control" maxlength="120"/>
                             </div>
-                            <div class="form-group">
-                                <label for="phone-number" class="control-label">
-                                    <?= lang('phone_number') ?>
-                                    <?= $require_phone_number === '1' ? '<span class="text-danger">*</span>' : '' ?>
-                                </label>
-                                <input type="text" id="phone-number" maxlength="60"
-                                       class="<?= $require_phone_number === '1' ? 'required' : '' ?> form-control"/>
-                            </div>
                         </div>
 
                         <div class="col-12 col-md-6">
-                            <div class="form-group">
-                                <label for="address" class="control-label">
-                                    <?= lang('address') ?>
-                                </label>
-                                <input type="text" id="address" class="form-control" maxlength="120"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="city" class="control-label">
-                                    <?= lang('city') ?>
-                                </label>
-                                <input type="text" id="city" class="form-control" maxlength="120"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="zip-code" class="control-label">
-                                    <?= lang('zip_code') ?>
-                                </label>
-                                <input type="text" id="zip-code" class="form-control" maxlength="120"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="notes" class="control-label">
-                                    <?= lang('notes') ?>
-                                </label>
-                                <textarea id="notes" maxlength="500" class="form-control" rows="1"></textarea>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -396,12 +355,6 @@
 
             <div id="frame-footer">
                 <small>
-                    <span class="footer-powered-by">
-                        Powered By
-
-                        <a href="https://easyappointments.org" target="_blank">Easy!Appointments</a>
-                    </span>
-
                     <span class="footer-options">
                         <span id="select-language" class="badge badge-secondary">
                             <i class="fas fa-language mr-2"></i>
