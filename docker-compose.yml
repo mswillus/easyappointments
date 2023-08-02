@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  db:
+    image: mariadb:10.3
+    environment:
+      MARIADB_USER: appoint
+      MARIADB_PASSWORD: appoint
+      MARIADB_ROOT_PASSWORD: appoint
+    ports:
+      - "127.0.0.1:3306:3306"
+
+  mailhog:
+    image: mailhog/mailhog:v1.0.1
+    ports:
+      - "127.0.0.1:1025:1025"
+      - "127.0.0.1:8025:8025"
